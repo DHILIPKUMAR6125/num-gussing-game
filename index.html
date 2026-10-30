@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <div class="game-header">
+            <div class="game-icon">🎯</div>
+
+            <h1>Number Guessing Game</h1>
+
+            <p>Can you find the secret number?</p>
+        </div>
+
+
+        <!-- Difficulty -->
+
+        <section class="difficulty-section">
+
+            <h3>Choose Difficulty</h3>
+
+            <div class="difficulty-buttons">
+
+                <button
+                    class="difficulty-button"
+                    data-level="easy"
+                    type="button">
+                    🟢 Easy
+                </button>
+
+                <button
+                    class="difficulty-button"
+                    data-level="medium"
+                    type="button">
+                    🟡 Medium
+                </button>
+
+                <button
+                    class="difficulty-button"
+                    data-level="hard"
+                    type="button">
+                    🔴 Hard
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Game Information -->
+
+        <section class="stats">
+
+            <div class="stat-box">
+                <span>⏱️</span>
+                <strong id="timer">Time: 30</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>🎯</span>
+                <strong id="attempts">Attempts: 0</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>⭐</span>
+                <strong id="score">Score: 150</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Game -->
+
+        <section class="game-area">
+
+            <p id="rangeText">
+                Guess a number between 1 and 100
+            </p>
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter your guess"
+                min="1"
+                max="100"
+                autocomplete="off">
+
+            <button
+                id="guessButton"
+                class="guess-button"
+                type="button">
+                🎯 Guess
+            </button>
+
+            <div id="result" class="result" aria-live="polite">
+                Start guessing!
+            </div>
+
+        </section>
+
+
+        <!-- Best Score -->
+
+        <div class="best-score">
+
+            🏆
+            <span id="bestScore">
+                Best Score: --
+            </span>
+
+        </div>
+
+
+        <!-- New Game -->
+
+        <button
+            id="newGameButton"
+            class="new-game-button"
+            type="button">
+
+            🔄 New Game
+
+        </button>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
